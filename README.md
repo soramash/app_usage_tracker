@@ -1,6 +1,3 @@
-# app_usage_tracker
-Tracking tools to monitor the active application usage on macOS
-
 # Active Application Usage Tracker
 
 This tool is designed to track the active application usage on macOS and store the data in a SQLite database. It supports two modes of operation:
@@ -9,8 +6,8 @@ This tool is designed to track the active application usage on macOS and store t
 
 ## Features
 - Real-time tracking of active applications on macOS.
-- Logs application usage in minute increments.
-- Provides daily usage summaries.
+- Logs application usage in second increments.
+- Provides daily usage summaries based on seconds.
 
 ---
 
@@ -79,7 +76,7 @@ Date: 2024-12-06, App: Terminal, Total Duration: 15 minutes
 
 1. **Tracking Mode**:
    - Uses macOS Accessibility API to determine the active application.
-   - Records the application's name, start time, end time, and duration (in minutes) into a SQLite database (`active_app_usage.db`).
+   - Records the application's name, start time, end time, and duration (in seconds) into a SQLite database (`active_app_usage.db`).
 
 2. **Report Mode**:
    - Reads the logged data from the database.
@@ -97,7 +94,7 @@ The SQLite database (`active_app_usage.db`) contains the following table:
 | `app_name`  | TEXT    | Name of the application               |
 | `start_time`| TEXT    | Start time of the application session |
 | `end_time`  | TEXT    | End time of the application session   |
-| `duration`  | INTEGER | Duration of the session in minutes    |
+| `duration`  | INTEGER | Duration of the session in seconds    |
 
 ---
 
