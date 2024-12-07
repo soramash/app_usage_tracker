@@ -1,0 +1,13 @@
+[package]
+name = "app_monitor"
+version = "0.8.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+core-foundation = "0.10.0"
+core-foundation-sys = "0.8.7"
+core-graphics = "0.24.0"
+ctrlc = "3.4.5"
+dirs = "5.0.1"
+rusqlite = "0.32.1"
