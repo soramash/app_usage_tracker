@@ -87,6 +87,12 @@ mv com.example.appmonitor.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.example.appmonitor.plist
 ```
 
+4. Add code signing (if you put the app under the system directory such as /usr/local/bin)
+
+```bash
+codesign --force --deep --sign - /usr/local/bin/app_monitor
+```
+
 ## Requirements
 - macOS
 - Rust (for building)
